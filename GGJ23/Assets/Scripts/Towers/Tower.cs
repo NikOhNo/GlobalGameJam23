@@ -11,4 +11,12 @@ public class Tower : MonoBehaviour
     {
         shootPosition = transform.Find("ProjectileShootFromPosition").position;
     }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) 
+        {
+
+        } 
+    }
 }

@@ -3,21 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Tower : MonoBehaviour
+public class Tower : MonoBehaviour
 {
-    [SerializeField]
-    GameObject towerPrefab;
+    private Vector3 shootPosition;
 
-    protected float attackRange;
-
-    protected private float timeBetweenAttacks;
-
-    protected private bool canPlaceOnTrack;
-
-    protected private int costToPlace;
-}
-
-public interface ITowerAttack
-{
-    void Attack();
+    private void Awake()
+    {
+        shootPosition = transform.Find("ProjectileShootFromPosition").position;
+    }
 }
